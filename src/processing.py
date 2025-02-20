@@ -20,7 +20,7 @@ def filter_by_state(
             new_list_1.append(i)
         else:
             new_list_2.append(i)
-    return f"EXECUTED: {new_list_1} \nCANCELED: {new_list_2}"
+    return f"state = EXECUTED: {new_list_1} \nstate = CANCELED: {new_list_2}"
 
 
 print(filter_by_state(list_of_dictionaries))
@@ -34,7 +34,7 @@ def sort_by_date(
         list_of_dictionaries, key=lambda x: x["date"], reverse=revers_str
     )
 
-    return f"Сортировка по убыванию: {sorted_list}"
+    return f"Сортировка списка по убыванию: {sorted_list}"
 
 
 print(sort_by_date(list_of_dictionaries))
