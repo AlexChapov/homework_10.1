@@ -29,7 +29,7 @@ print(filter_by_state(list_of_dictionaries))
 def sort_by_date(
     list_of_dictionaries: List[Dict[str, Union[str, int]]], revers_str: bool = True
 ) -> List[Dict[str, Union[str, int]]]:
-    """Функция возвращающая список отсортированный по дате"""
+    """Функция возвращающая список отсортированный по дате (по убыванию)"""
     sorted_list = sorted(
         list_of_dictionaries, key=lambda x: x["date"], reverse=revers_str
     )
