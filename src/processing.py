@@ -1,6 +1,6 @@
 from typing import Dict, List, Union
 
-list_of_dictionaries = [
+dictionaries = [
     {"id": 41428829, "state": "EXECUTED", "date": "2019-07-03T18:35:29.512364"},
     {"id": 939719570, "state": "EXECUTED", "date": "2018-06-30T02:08:58.425572"},
     {"id": 594226727, "state": "CANCELED", "date": "2018-09-12T21:27:25.241689"},
@@ -9,13 +9,14 @@ list_of_dictionaries = [
 
 
 def filter_by_state(
-    list_of_dictionaries: list[dict], state: str = "EXECUTED"
-) -> tuple[list, list]:
-    """Функция распределения по спискам"""
+    dictionaries: list[dict], state: str = "EXECUTED"
+) -> tuple[list[dict], list[dict]]:
+    """Функция принимает на вход список словарей и возвращает сортированные списки по
+    значению для ключа state (EXECUTED и CANCELED)"""
     new_list_1 = []
     new_list_2 = []
 
-    for i in list_of_dictionaries:
+    for i in dictionaries:
         if i.get("state") == "EXECUTED":
             new_list_1.append(i)
         else:
@@ -23,18 +24,16 @@ def filter_by_state(
     return f"state = EXECUTED: {new_list_1} \nstate = CANCELED: {new_list_2}"
 
 
-print(filter_by_state(list_of_dictionaries))
+print(filter_by_state(dictionaries))
 
 
 def sort_by_date(
-    list_of_dictionaries: List[Dict[str, Union[str, int]]], revers_str: bool = True
+    dictionaries: List[Dict[str, Union[str, int]]], revers_str: bool = True
 ) -> List[Dict[str, Union[str, int]]]:
     """Функция возвращающая список отсортированный по дате (по убыванию)"""
-    sorted_list = sorted(
-        list_of_dictionaries, key=lambda x: x["date"], reverse=revers_str
-    )
+    sorted_list = sorted(dictionaries, key=lambda x: x["date"], reverse=revers_str)
 
     return f"Сортировка списка по убыванию: {sorted_list}"
 
 
-print(sort_by_date(list_of_dictionaries))
+print(sort_by_date(dictionaries))
