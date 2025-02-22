@@ -21,9 +21,7 @@ def filter_by_state(dictionaries: list[dict], state: str = "EXECUTED") -> list[d
 print(filter_by_state(dictionaries))
 
 
-def sort_by_date(
-    dictionaries: list[dict[str, str|int]], revers_str: bool = True
-) -> list[dict[str, str|int]]:
+def sort_by_date(dictionaries: list[dict[str, str|int]], revers_str: bool = True) -> list[dict[str, str|int]]:
     """Функция возвращающая список отсортированный по дате (по убыванию)"""
     sorted_list = sorted(dictionaries, key=lambda x: x["date"], reverse=revers_str)
 
