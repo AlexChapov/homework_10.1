@@ -2,6 +2,7 @@ import pytest
 
 from src.widget import get_date
 
+
 @pytest.mark.parametrize(
     "getting_the_date, conclusion",
     [
@@ -12,6 +13,5 @@ from src.widget import get_date
         ("2024-03-03T04:10:42.425421", "03.03.2024"),
     ],
 )
-
 def test_get_date(getting_the_date: str, conclusion: str) -> None:
     assert get_date(getting_the_date) == conclusion

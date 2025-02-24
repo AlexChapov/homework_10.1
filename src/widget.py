@@ -1,8 +1,8 @@
 from src.masks import get_mask_account, get_mask_card_number
 
 """Получение данных на вход"""
-#data_entry = input("Введите данные карты: ")
-#getting_the_date = input("Введите дату: ")
+# data_entry = input("Введите данные карты: ")
+# getting_the_date = input("Введите дату: ")
 
 
 def mask_account_card(data_entry: str) -> str:
@@ -17,7 +17,6 @@ def mask_account_card(data_entry: str) -> str:
     return invoice_result
 
 
-
 def get_date(getting_the_date: str) -> str:
     """Функция создающая дату в формате ДД.ММ.ГГГГ"""
     if len(getting_the_date) == 26:
@@ -29,5 +28,5 @@ def get_date(getting_the_date: str) -> str:
 
 
 """Функция "print" с целью проверки работы"""
-#print(mask_account_card(data_entry))
-#print(get_date(getting_the_date))
+# print(mask_account_card(data_entry))
+# print(get_date(getting_the_date))

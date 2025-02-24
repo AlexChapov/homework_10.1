@@ -2,6 +2,7 @@ import pytest
 
 from src.widget import mask_account_card
 
+
 @pytest.mark.parametrize(
     "data_entry, invoice_result",
     [
@@ -14,7 +15,6 @@ from src.widget import mask_account_card
         ("Visa Gold 5999414228426353", "Visa Gold 5999 41** **** 6353"),
     ],
 )
-
 def test_mask_account_card(data_entry: str, invoice_result: str) -> None:
     assert mask_account_card(data_entry) == invoice_result
 
@@ -30,6 +30,5 @@ def test_mask_account_card(data_entry: str, invoice_result: str) -> None:
         ("Счет 95928416864794176133", "Счет **6133"),
     ],
 )
-
 def test_mask_account_card(data_entry: str, invoice_result: str) -> None:
     assert mask_account_card(data_entry) == invoice_result
