@@ -7,10 +7,15 @@ getting_the_date = input("Введите дату: ")
 
 def mask_account_card(data_entry: str) -> str:
     """Функция создающая маску для полученных данных карт, счета"""
-    if data_entry[:4] == "Счет" or len(data_entry) == 25:
-        return get_mask_account(data_entry)
+    if data_entry[:4] == "Счет":
+        if len(data_entry) == 25:
+            return get_mask_account(data_entry)
+        else:
+            return "Неверный номер счета!"
     else:
         return get_mask_card_number(data_entry)
+
+
 
 
 def get_date(getting_the_date: str) -> str:
