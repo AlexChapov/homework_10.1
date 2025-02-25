@@ -14,4 +14,5 @@ from src.widget import get_date
     ],
 )
 def test_get_date(getting_the_date: str, conclusion: str) -> None:
+    """Тест функции get_date по передаче строки и даты"""
     assert get_date(getting_the_date) == conclusion

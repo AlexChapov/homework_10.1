@@ -12,4 +12,5 @@ from src.masks import get_mask_account
     ],
 )
 def test_mask_account(account_number: str, mask_account_number: str) -> None:
+    """Тест функции get_mask_account с передачей строки со счетом на возвращение маски"""
     assert get_mask_account(account_number) == mask_account_number

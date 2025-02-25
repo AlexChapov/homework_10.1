@@ -12,4 +12,5 @@ from src.masks import get_mask_card_number
     ],
 )
 def test_mask_card_number(card_number: str, mask_card_number: str) -> None:
+    """Тест функции get_mask_card_number с передачей строки со счетом на возвращение маски"""
     assert get_mask_card_number(card_number) == mask_card_number

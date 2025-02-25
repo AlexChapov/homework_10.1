@@ -103,5 +103,5 @@ from src.processing import sort_by_date
     ],
 )
 def test_sort_by_date(dictionaries: list, revers_str: bool, sorted_list: list) -> None:
-    """Функция передает словари с датой"""
+    """Тест функции sort_by_date по передаче словарей с датой"""
     assert sort_by_date(dictionaries, revers_str) == sorted_list

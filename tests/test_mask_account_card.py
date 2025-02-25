@@ -16,6 +16,7 @@ from src.widget import mask_account_card
     ],
 )
 def test_mask_account_card(data_entry: str, invoice_result: str) -> None:
+    """Тест функции mask_account_card на передачу данных платежных систем кроме 'счет'"""
     assert mask_account_card(data_entry) == invoice_result
 
 
@@ -31,4 +32,5 @@ def test_mask_account_card(data_entry: str, invoice_result: str) -> None:
     ],
 )
 def test_mask_account_card(data_entry: str, invoice_result: str) -> None:
+    """Тест функции mask_account_card на передачу данных 'счет'"""
     assert mask_account_card(data_entry) == invoice_result
