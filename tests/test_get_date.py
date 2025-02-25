@@ -28,8 +28,6 @@ def test_get_date(getting_the_date: str, conclusion: str) -> None:
         ("2021-03-03T04:10:42.425421", "03.03.2021"),
     ],
 )
-
-
 def test_get_date_len(getting_the_date: str, conclusion: str) -> None:
     """Тест функции get_date по передаче строки и даты по длине строки"""
     assert len(getting_the_date) == 26, conclusion == 10
@@ -41,12 +39,10 @@ def test_get_date_len(getting_the_date: str, conclusion: str) -> None:
         ("2013-0111T04:13:18.671407", "Неправильный формат даты/время"),
         ("2024-0212:21:13.435211", "Неправильный формат даты/время"),
         ("2024-03-03T010:42.425421", "Неправильный формат даты/время"),
-        ("202503T04:10:44.422421", "Неправильный формат даты/время"),
+        ("202503T04:10:44.42241", "Неправильный формат даты/время"),
         ("2021-03-03T0410:42.4254", "Неправильный формат даты/время"),
     ],
 )
-
-
-def test_get_date_len_mistake(getting_the_date: str, conclusion: str) -> None:
+def test_get_date_len(getting_the_date: str, conclusion: str) -> None:
     """Тест функции get_date по неверной передаче строки и даты по длине строки"""
     assert len(getting_the_date) != 26, conclusion == "Неправильный формат даты/время"
