@@ -47,6 +47,6 @@ def test_get_date_len(getting_the_date: str, conclusion: str) -> None:
 )
 
 
-def test_get_date_len(getting_the_date: str, conclusion: str) -> None:
+def test_get_date_len_mistake(getting_the_date: str, conclusion: str) -> None:
     """Тест функции get_date по неверной передаче строки и даты по длине строки"""
     assert len(getting_the_date) != 26, conclusion == "Неправильный формат даты/время"
