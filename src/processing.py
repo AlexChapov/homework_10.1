@@ -18,7 +18,7 @@ def filter_by_state(dictionaries: list[dict], state: str = "EXECUTED") -> list[d
     return new_list_1
 
 
-#print(filter_by_state(dictionaries))
+# print(filter_by_state(dictionaries))
 
 
 def sort_by_date(dictionaries: list[dict[str, str | int]], revers_str: bool = True) -> list[dict[str, str | int]]:
@@ -28,4 +28,4 @@ def sort_by_date(dictionaries: list[dict[str, str | int]], revers_str: bool = Tr
     return sorted_list
 
 
-#print(sort_by_date(dictionaries))
+# print(sort_by_date(dictionaries))
