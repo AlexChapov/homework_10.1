@@ -78,3 +78,26 @@ print(next(description))
 print(next(description))
 
 
+def card_number_generator(start: int, stop: int) -> list[str]:
+    while True:
+        for num in range(start, stop + 1):
+            number = "0" * (16 - len(str(num))) + str(num)
+            string_to_return = ""
+            block_counter = 0
+            for digit in number:
+                block_counter += 1
+                if block_counter <= 4:
+                    string_to_return += digit
+                else:
+                    string_to_return += " " + digit
+                    block_counter = 1
+            yield string_to_return
+
+
+number_card = card_number_generator(1, 9999999999999999)
+
+print(next(number_card))
+print(next(number_card))
+print(next(number_card))
+print(next(number_card))
+print(next(number_card))
