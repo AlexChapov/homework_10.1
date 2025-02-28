@@ -2,6 +2,7 @@ import pytest
 
 from src.generators import card_number_generator
 
+
 def test_card_number_generator() -> None:
     """Функция которая передает данные для проверки card_number_generator"""
     generator = card_number_generator(1, 9999999999999999)

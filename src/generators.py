@@ -79,6 +79,7 @@ print(next(description))
 
 
 def card_number_generator(start: int, stop: int) -> list[str]:
+    """Генератор номеров банковских карт в формате XXXX XXXX XXXX XXXX"""
     while True:
         for num in range(start, stop + 1):
             number = "0" * (16 - len(str(num))) + str(num)
