@@ -47,11 +47,11 @@ transactions = [
 ]
 
 
-def filter_by_currency(transactions: list[dict[str, str | int]]) -> list[dict[str, str | int]]:
+def filter_by_currency(transactions: list[dict[str, str | int]], currency_code="USD") -> list[dict[str, str | int]]:
     """Функция принимает на вход список словарей, представляющих транзакции, возвращает
     транзакции, где валюта операции соответствует заданной (['code'] == 'USD')"""
     for transaction in transactions:
-        if transaction["operationAmount"]["currency"]["code"] == "USD":
+        if transaction["operationAmount"]["currency"]["code"] == currency_code:
             yield transaction
 
 
