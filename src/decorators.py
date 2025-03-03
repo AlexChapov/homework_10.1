@@ -1,14 +1,15 @@
 import os
 from functools import wraps
+from typing import Any, Callable, Optional
 
 
-def log(filename: str):
+def log(filename: Optional[str] = None) -> Callable:
     """Декоратор, который будет логировать вызов функции
     и ее результат в файл или в консоль."""
 
-    def wrapper(func):
+    def wrapper(func: Callable) -> Callable:
         @wraps(func)
-        def inner(*args, **kwargs):
+        def inner(*args: tuple, **kwargs: dict) -> Any:
 
             try:
                 result = func(*args, **kwargs)
