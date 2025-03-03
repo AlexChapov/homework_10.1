@@ -1,28 +1,34 @@
+import os
 from functools import wraps
 
 
-def log(filename):
-    """Декоратор для логирования функции, её аргументов, результатов и ошибок"""
+def log(filename: str):
+    """Декоратор, который будет логировать вызов функции
+    и ее результат в файл или в консоль."""
 
-    def logging_decorator(func):
+    def wrapper(func):
         @wraps(func)
-        def wrapper(*args, **kwargs):
+        def inner(*args, **kwargs):
+
             try:
                 result = func(*args, **kwargs)
-                if filename is not None:
-                    with open(filename, "a") as file:
-                        file.write(f"{func.__name__} ok")
-                else:
-                    print(f"{func.__name__} ok")
+                log_str = f"{func.__name__} ok. Result: {result}"
                 return result
-            except TypeError as e:
-                if filename is not None:
-                    with open(filename, "a") as file:
-                        file.write(f"{func.__name__} error: {e}. Inputs: {args}, {kwargs}")
-                else:
-                    print(f"{func.__name__} error: {e}. Inputs: {args}, {kwargs}")
+
+            except Exception as e:
+                log_str = f"{func.__name__} {type(e).__name__}: {e}. Inputs: {args}, {kwargs}"
                 raise e
 
-        return wrapper
+            finally:
+                if filename:  # Запись лога в файл.
+                    if not os.path.exists(r"logs"):
+                        os.mkdir(r"logs")  # Создать папку «logs», если ее нет.
+                    with open(os.path.join(r"logs", filename), "at") as file:
+                        file.write(log_str + "\n")
 
-    return logging_decorator
+                else:  # Вывод лога в консоль.
+                    print(log_str)
+
+        return inner
+
+    return wrapper
