@@ -6,7 +6,7 @@ def reading_json_file(operations: str) -> list[dict]:
     try:
         with open(operations, "r", encoding="utf-8") as f:
             content = f.read()
-        #print(f"Файл {operations} открыт на чтение")
+        # print(f"Файл {operations} открыт на чтение")
         """Если файл, указанный в переменной operations, не сущаетвует"""
     except FileNotFoundError:
         print(f"Файл {operations} не существует")
@@ -15,7 +15,7 @@ def reading_json_file(operations: str) -> list[dict]:
     """Если json-файл (operations) пустой возвращается пустой список"""
     try:
         data = json.loads(content)
-        #print(f"Данные из файла {operations} прочитаны")
+        # print(f"Данные из файла {operations} прочитаны")
     except json.JSONDecodeError:
         print(f"Ошибка чтения json из файла {operations}")
         return []
