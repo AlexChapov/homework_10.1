@@ -36,7 +36,7 @@ def currency_conversion(transaction: dict) -> float:
 
 if __name__ == "__main__":
 
-    dict_1 = {
+    transaction_1 = {
         "id": 441945886,
         "state": "EXECUTED",
         "date": "2019-08-26T10:50:58.294041",
@@ -46,9 +46,9 @@ if __name__ == "__main__":
         "to": "Счет 64686473678894779589",
     }
 
-    print(currency_conversion(dict_1))
+    print(currency_conversion(transaction_1))
 
-    dict_2 = {
+    transaction_2 = {
         "id": 41428829,
         "state": "EXECUTED",
         "date": "2019-07-03T18:35:29.512364",
@@ -58,4 +58,4 @@ if __name__ == "__main__":
         "to": "Счет 35383033474447895560",
     }
 
-    print(currency_conversion(dict_2))
+    print(currency_conversion(transaction_2))

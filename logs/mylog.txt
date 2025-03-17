@@ -12,3 +12,4 @@ example_function TypeError: пїЅпїЅпїЅ-пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ. I
 example_function TypeError: пїЅпїЅпїЅ-пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ. Inputs: (5, 100), {}
 example_function TypeError: пїЅпїЅпїЅ-пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ. Inputs: (5, 100), {}
 example_function TypeError: пїЅпїЅпїЅ-пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅ. Inputs: (5, 100), {}
+example_function TypeError: Что-то пошло не так. Inputs: (5, 100), {}
