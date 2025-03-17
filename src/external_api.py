@@ -23,7 +23,7 @@ def currency_conversion(transaction: dict) -> float:
             )
             if response.status_code == 200:
                 data = response.json()
-                return data["result"]
+                return round(data["result"], 2)
             else:
                 print(f"Ошибка при конвертации валюты: {response.status_code}")
                 return 0.0

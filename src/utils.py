@@ -7,7 +7,7 @@ def reading_json_file(operations: str) -> list[dict]:
         with open(operations, "r", encoding="utf-8") as f:
             content = f.read()
         # print(f"Файл {operations} открыт на чтение")
-        """Если файл, указанный в переменной operations, не сущаетвует"""
+        """Если файл, указанный в переменной operations, не сущеcтвует"""
     except FileNotFoundError:
         print(f"Файл {operations} не существует")
         return []
