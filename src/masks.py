@@ -15,7 +15,6 @@ logger.addHandler(file_handler)
 logger.setLevel(logging.DEBUG)
 
 
-
 def get_mask_card_number(card_number: str) -> str:
     """Функция создающая маску для номера карты"""
     if len(card_number) == 16:
