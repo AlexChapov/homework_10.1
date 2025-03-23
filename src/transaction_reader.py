@@ -14,3 +14,7 @@ def read_excel(file_path: str) -> list[dict]:
     """Функция принимает в качестве аргумента путь к excel-файлу и возвращает его содержимое в виде списка словарей."""
     excel_data = pd.read_excel(file_path).to_dict(orient="records")
     return excel_data
+
+
+#print(read_csv("../data/transactions.csv"))
+#print(read_excel("../data/transactions_excel.xlsx"))

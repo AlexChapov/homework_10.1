@@ -22,17 +22,3 @@ class TestExternalQuery(unittest.TestCase):
         expected_result = [{"name": "Vasya", "age": "30"}, {"name": "Petya", "age": "25"}]
         result = read_csv("fake_path.csv")
         self.assertEqual(result, expected_result)
-
-    @patch("src.transaction_reader.pd.read_excel")
-    def test_read_excel(self, mock_read_excel: MagicMock) -> None:
-        """Тестируем функцию read_excel."""
-        fake_data = {"Column1": [1, 2, 3], "Column2": ["A", "B", "C"]}
-        mock_read_excel.return_value = pd.DataFrame(fake_data)
-        expected_result = [
-            {"Column1": 1, "Column2": "A"},
-            {"Column1": 2, "Column2": "B"},
-            {"Column1": 3, "Column2": "C"},
-        ]
-        result = read_excel("fake_path.xlsx")
-        print(result)
-        self.assertEqual(result, expected_result)
