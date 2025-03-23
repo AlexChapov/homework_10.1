@@ -1,7 +1,0 @@
-2025-03-23 19:57:44,395 - transaction_reader - INFO: Данные из файла ../data/transactions.csv прочитаны.
-2025-03-23 20:02:21,055 - transaction_reader - INFO: Данные из файла ../data/transactions.csv прочитаны.
-2025-03-23 20:02:42,429 - transaction_reader - INFO: Данные из файла ../data/transactions.csv прочитаны.
-2025-03-23 20:21:03,429 - transaction_reader - INFO: Данные из файла ../data/transactions.csv прочитаны.
-2025-03-23 20:22:38,450 - transaction_reader - INFO: Данные из файла ../data/transactions.csv прочитаны.
-2025-03-23 20:23:30,335 - transaction_reader - INFO: Данные из файла ../data/transactions.csv прочитаны.
-2025-03-23 20:24:15,987 - transaction_reader - INFO: Данные из файла ../data/transactions.csv прочитаны.
