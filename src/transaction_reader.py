@@ -1,5 +1,4 @@
 import csv
-
 import pandas as pd
 
 
@@ -16,5 +15,5 @@ def read_excel(file_path: str) -> list[dict]:
     return excel_data
 
 
-#print(read_csv("../data/transactions.csv"))
-#print(read_excel("../data/transactions_excel.xlsx"))
+# print(read_csv("../data/transactions.csv"))
+# print(read_excel("../data/transactions_excel.xlsx"))

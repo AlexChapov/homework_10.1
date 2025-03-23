@@ -1,7 +1,6 @@
 import unittest
 from unittest.mock import MagicMock, mock_open, patch
 
-import pandas as pd
 
 from src.transaction_reader import read_csv, read_excel
 
