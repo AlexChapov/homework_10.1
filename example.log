@@ -1,0 +1,4 @@
+2025-03-22 16:10:18,390 - src.utils - ERROR: Файл ../data/operations.json не существует
+2025-03-22 16:10:18,518 - src.utils - ERROR: Файл ../data/operations.json не существует
+2025-03-22 16:10:18,524 - src.utils - INFO: Файл fake.json открыт на чтение
+2025-03-22 16:10:18,524 - src.utils - INFO: Данные из файла fake.json прочитаны
