@@ -41,4 +41,4 @@ def reading_json_file(operations: str) -> list[dict]:
     return data
 
 
-print(reading_json_file("../data/operations.json"))
+# print(reading_json_file("../data/operations.json"))
