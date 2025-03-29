@@ -1,5 +1,6 @@
-from src.external_api import currency_conversion, API_KEY
 from unittest.mock import patch
+
+from src.external_api import API_KEY, currency_conversion
 
 
 def test_currency_conversion(transaction_api):

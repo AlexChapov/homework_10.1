@@ -16,13 +16,9 @@ logger.setLevel(logging.DEBUG)
 
 def get_mask_card_number(card_number: str) -> str:
     """Функция создающая маску для номера карты"""
-    if len(card_number) == 16:
-        mask_card_number = f"{card_number[:-12]} {card_number [-12:-10]}** **** {card_number[-4:]}"
-        logger.info(f"Задаем формат маски для номера счета {card_number}")
-        return mask_card_number
-    else:
-        logger.error("Ошибка. Проверьте длину номера карты. Он должен содержать 16 символов")
-        return "Неправильно введен номер карты"
+    mask_card_number = f"{card_number[:-12]} {card_number [-12:-10]}** **** {card_number[-4:]}"
+    logger.info(f"Задаем формат маски для номера счета {card_number}")
+    return mask_card_number
 
 
 def get_mask_account(account_number: str) -> str:

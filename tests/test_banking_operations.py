@@ -1,6 +1,4 @@
-import pytest
-from src.banking_operations import group_transactions_by_category, find_transactions
-
+from src.banking_operations import find_transactions, group_transactions_by_category
 
 
 def test_find_transactions() -> None:
