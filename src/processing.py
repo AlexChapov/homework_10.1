@@ -18,7 +18,7 @@ def filter_by_state(dictionaries: list[dict], state: str = "EXECUTED") -> list[d
     return new_list_1
 
 
-print(filter_by_state(dictionaries))
+# print(filter_by_state(dictionaries))
 
 
 def sort_by_date(dictionaries: list[dict[str, str | int]], revers_str: bool = True) -> list[dict[str, str | int]]:
@@ -28,4 +28,20 @@ def sort_by_date(dictionaries: list[dict[str, str | int]], revers_str: bool = Tr
     return sorted_list
 
 
-print(sort_by_date(dictionaries))
+def filter_by_rub(transactions_list: list) -> list:
+    """Функция возвращает список словарей, содержащий только те словари, у которых ключ 'code' равен RUB."""
+    if not transactions_list:
+        print(f"Передан пустой список операций {transactions_list}.")
+        raise ValueError("Список операций не должен быть пустым!")
+
+    result = []
+    for transaction in transactions_list:
+        if transaction == {}:
+            continue
+        if transaction["operationAmount"]["currency"]["code"] == "RUB":
+            result.append(transaction)
+
+    return result
+
+
+# print(sort_by_date(dictionaries))
