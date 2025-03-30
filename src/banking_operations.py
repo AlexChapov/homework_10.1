@@ -1,7 +1,15 @@
 import re
 from collections import Counter
-
+import logging
 from src.utils import reading_json_file
+
+
+logger = logging.getLogger("utils")
+file_handler = logging.FileHandler("../logs/masks.log", encoding="utf-8")
+file_formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s: %(message)s")
+file_handler.setFormatter(file_formatter)
+logger.addHandler(file_handler)
+logger.setLevel(logging.DEBUG)
 
 
 def find_transactions(transactions_list: list, key_string: str) -> list:
@@ -29,7 +37,7 @@ def find_transactions(transactions_list: list, key_string: str) -> list:
                 continue
             filtered_transactions_list.append(transaction)
 
-    print(f"Список операций успешно отфильтрован по описанию: {key_string}.")
+    logger.info(f"Список операций успешно отфильтрован по описанию: {key_string}.")
     return filtered_transactions_list
 
 
@@ -43,10 +51,10 @@ def group_transactions_by_category(transactions_list: list) -> dict:
     ]
     grouped_transactions = Counter(description_list)
 
-    print("Список операций успешно сгрупирован по названиям категорий.")
+    logger.info("Список операций успешно сгрупирован по названиям категорий.")
     return dict(grouped_transactions)
 
 
-transactions = reading_json_file("../data/operations.json")
+# transactions = reading_json_file("../data/operations.json")
 # print(find_transactions(transactions, "открытие вклада"))
-print(group_transactions_by_category(transactions))
+# print(group_transactions_by_category(transactions))
